@@ -2,7 +2,7 @@ package main
 
 import (
 	// TODO: update the path below to match your own repository
-	"github.com/yalh76/nomad-driver-lxd/lxc"
+	"github.com/yalh76/nomad-driver-lxd/lxd"
 
 	"github.com/hashicorp/go-hclog"
 	"github.com/hashicorp/nomad/plugins"
