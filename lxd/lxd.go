@@ -54,9 +54,9 @@ func (d *Driver) lxdPath() string {
 	return lxdPath
 
 }
+
 func (d *Driver) initializeContainer(cfg *drivers.TaskConfig, taskConfig TaskConfig) (*lxc.Container, error) {
 	lxcPath := d.lxcPath()
-	lxdPath := d.lxdPath()
 
 	containerName := fmt.Sprintf("%s-%s", cfg.Name, cfg.AllocID)
 	c, err := lxc.NewContainer(containerName, lxcPath)
