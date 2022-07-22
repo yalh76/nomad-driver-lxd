@@ -111,7 +111,7 @@ func (d *Driver) configureContainerNetwork(c *lxc.Container, taskConfig TaskConf
 		if err := c.SetConfigItem(lxcKeyPrefix+"type", "veth"); err != nil {
 			return fmt.Errorf("error setting network type configuration 'veth': %v", err)
 		}
-		if err := c.SetConfigItem(lxcKeyPrefix+"link", "lxcbr0"); err != nil {
+		if err := c.SetConfigItem(lxcKeyPrefix+"link", "lxdbr0"); err != nil {
 			return fmt.Errorf("error setting network link configuration: %v", err)
 		}
 		if err := c.SetConfigItem(lxcKeyPrefix+"flags", "up"); err != nil {

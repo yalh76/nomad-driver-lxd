@@ -1,4 +1,4 @@
-# How to release nomad-driver-lxc
+# How to release nomad-driver-lxd
 
 1. Preflight check:
 

@@ -41,7 +41,7 @@ exit-code
 *.iml
 
 example.nomad
-nomad-driver-lxc
+nomad-driver-lxd
 TODO.md
 
 ./idea

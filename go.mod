@@ -1,4 +1,4 @@
-module github.com/hashicorp/nomad-driver-lxc
+module github.com/yalh76/nomad-driver-lxd
 
 go 1.15
 
