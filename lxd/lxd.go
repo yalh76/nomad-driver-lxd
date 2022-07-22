@@ -49,7 +49,7 @@ func (d *Driver) lxcPath() string {
 func (d *Driver) lxdPath() string {
 	lxdPath := d.config.LXDPath
 	if lxdPath == "" {
-		lxdPath = lxd.DefaultConfigPath()
+		lxdPath = lxc.DefaultConfigPath()
 	}
 	return lxdPath
 
