@@ -2,4 +2,4 @@
 
 set -e
 
-cd /opt/gopath/src/github.com/hashicorp/nomad-driver-lxc && make lint-deps
+cd /opt/gopath/src/github.com/yalh76/nomad-driver-lxd && make lint-deps

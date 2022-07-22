@@ -69,6 +69,7 @@ func (h *taskHandle) run() {
 	}
 	h.stateLock.Unlock()
 
+	// TODO: wait for your task to complete and upate its state.
 	if ok, err := waitTillStopped(h.container); !ok {
 		h.logger.Error("failed to find container process", "error", err)
 		return

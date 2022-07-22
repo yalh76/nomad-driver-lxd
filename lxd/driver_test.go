@@ -27,7 +27,7 @@ func TestLXCDriver_Fingerprint(t *testing.T) {
 
 	require := require.New(t)
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = true
 	d.config.NetworkMode = "host"
 	harness := dtestutil.NewDriverHarness(t, d)
@@ -50,7 +50,7 @@ func TestLXCDriver_FingerprintNotEnabled(t *testing.T) {
 
 	require := require.New(t)
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = false
 	d.config.NetworkMode = "host"
 	harness := dtestutil.NewDriverHarness(t, d)
@@ -90,7 +90,7 @@ func TestLXCDriver_Start_Wait(t *testing.T) {
 		t.Fatalf("error closing temp file: %v", err)
 	}
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = true
 	d.config.AllowVolumes = true
 	d.config.NetworkMode = "host"
@@ -196,7 +196,7 @@ func TestLXCDriver_Start_Stop(t *testing.T) {
 
 	require := require.New(t)
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = true
 	d.config.AllowVolumes = true
 	d.config.NetworkMode = "host"
@@ -284,7 +284,7 @@ func TestLXCDriver_GC_Container_on(t *testing.T) {
 
 	require := require.New(t)
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = true
 	d.config.NetworkMode = "host"
 	// enable Container GC
@@ -369,7 +369,7 @@ func TestLXCDriver_GC_Container_off(t *testing.T) {
 
 	require := require.New(t)
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = true
 	d.config.NetworkMode = "host"
 	// disable Container GC

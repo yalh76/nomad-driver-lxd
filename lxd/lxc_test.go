@@ -47,7 +47,7 @@ func TestLXCDriver_Mounts(t *testing.T) {
 		},
 	}
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = true
 
 	entries, err := d.mountEntries(task, taskConfig)
@@ -83,7 +83,7 @@ func TestLXCDriver_BadMounts(t *testing.T) {
 		Volumes:  []string{"/absolute/path:/usr-config/container/path"},
 	}
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = true
 	d.config.AllowVolumes = false
 
@@ -107,7 +107,7 @@ func TestLXCDriver_DevicesCgroup(t *testing.T) {
 		},
 	}
 
-	d := NewLXCDriver(testlog.HCLogger(t)).(*Driver)
+	d := NewLXDDriver(testlog.HCLogger(t)).(*Driver)
 	d.config.Enabled = true
 
 	cgroupEntries, err := d.devicesCgroupEntries(task)
