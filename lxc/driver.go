@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/nomad/plugins/base"
 	"github.com/hashicorp/nomad/plugins/drivers"
 	"github.com/hashicorp/nomad/plugins/shared/hclspec"
-	"github.com/hashicorp/nomad/plugins/shared/structs"
+	pstructs "github.com/hashicorp/nomad/plugins/shared/structs"
 	lxc "github.com/lxc/go-lxc"
 )
 
