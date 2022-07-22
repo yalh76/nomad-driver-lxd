@@ -45,6 +45,15 @@ func (d *Driver) lxcPath() string {
 	return lxcPath
 
 }
+
+func (d *Driver) lxdPath() string {
+	lxdPath := d.config.LXDPath
+	if lxdPath == "" {
+		lxdPath = lxd.DefaultConfigPath()
+	}
+	return lxdPath
+
+}
 func (d *Driver) initializeContainer(cfg *drivers.TaskConfig, taskConfig TaskConfig) (*lxc.Container, error) {
 	lxcPath := d.lxcPath()
 

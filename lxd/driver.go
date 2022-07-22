@@ -73,6 +73,7 @@ var (
 			hclspec.NewLiteral("\""+lxc.GlobalConfigItem("lxc.default_config")+"\""),
 		),
 		"lxc_path": hclspec.NewAttr("lxc_path", "string", false),
+		"lxd_path": hclspec.NewAttr("lxd_path", "string", false),
 		"network_mode": hclspec.NewDefault(
 			hclspec.NewAttr("network_mode", "string", false),
 			hclspec.NewLiteral("\"bridge\""),
@@ -158,6 +159,8 @@ type Config struct {
 	DefaultConfig string `codec:"default_config"`
 
 	LXCPath string `codec:"lxc_path"`
+
+	LXDPath string `codec:"lxd_path"`
 
 	// default networking mode if not specified in task config
 	NetworkMode string `codec:"network_mode"`
