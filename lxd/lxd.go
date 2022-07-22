@@ -56,13 +56,13 @@ func (d *Driver) lxdPath() string {
 }
 func (d *Driver) initializeContainer(cfg *drivers.TaskConfig, taskConfig TaskConfig) (*lxc.Container, error) {
 	lxcPath := d.lxcPath()
+	lxdPath := d.lxdPath()
 
 	containerName := fmt.Sprintf("%s-%s", cfg.Name, cfg.AllocID)
 	c, err := lxc.NewContainer(containerName, lxcPath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to initialize container: %v", err)
 	}
-
 	if v, ok := verbosityLevels[taskConfig.Verbosity]; ok {
 		c.SetVerbosity(v)
 	} else {
