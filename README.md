@@ -14,17 +14,17 @@ Requirements
 Building The Driver
 ---------------------
 
-Clone repository to: `$GOPATH/src/github.com/hashicorp/nomad-driver-lxc`
+Clone repository to: `$GOPATH/src/github.com/yalh76/nomad-driver-lxd`
 
 ```sh
 $ mkdir -p $GOPATH/src/github.com/hashicorp; cd $GOPATH/src/github.com/hashicorp
-$ git clone git@github.com:hashicorp/nomad-driver-lxc
+$ git clone git@github.com:yalh76/nomad-driver-lxd
 ```
 
 Enter the provider directory and build the provider
 
 ```sh
-$ cd $GOPATH/src/github.com/hashicorp/nomad-driver-lxc
+$ cd $GOPATH/src/github.com/yalh76/nomad-driver-lxd
 $ make build
 ```
 

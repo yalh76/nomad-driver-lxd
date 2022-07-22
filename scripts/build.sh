@@ -4,7 +4,7 @@ set -o errexit
 
 build_locally() {
   DEST="pkg/linux_amd64"
-  NAME="nomad-driver-lxc"
+  NAME="nomad-driver-lxd"
 
   mkdir -p "${DEST}"
   echo "===> Building lxc driver binary"

@@ -3,7 +3,7 @@ package main
 import (
 	log "github.com/hashicorp/go-hclog"
 
-	"github.com/hashicorp/nomad-driver-lxc/lxc"
+	"github.com/yalh76/nomad-driver-lxd/lxc"
 	"github.com/hashicorp/nomad/plugins"
 )
 

@@ -41,7 +41,7 @@ ALL_TARGETS += linux_amd64
 # Define package targets for each of the build targets we actually have on this system
 define makePackageTarget
 
-pkg/$(1).zip: pkg/$(1)/nomad-driver-lxc
+pkg/$(1).zip: pkg/$(1)/nomad-driver-lxd
 	@echo "==> Packaging for $(1)..."
 	@zip -j pkg/$(1).zip pkg/$(1)/*
 
@@ -50,11 +50,11 @@ endef
 # Reify the package targets
 $(foreach t,$(ALL_TARGETS),$(eval $(call makePackageTarget,$(t))))
 
-pkg/linux_amd64/nomad-driver-lxc:
+pkg/linux_amd64/nomad-driver-lxd:
 	./scripts/build.sh
 
 .PHONY: dev
-dev: clean pkg/linux_amd64/nomad-driver-lxc
+dev: clean pkg/linux_amd64/nomad-driver-lxd
 
 .PHONY: release
 release: clean pkg/linux_amd64.zip
