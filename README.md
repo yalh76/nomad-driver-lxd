@@ -1,4 +1,4 @@
-Nomad LXC Driver
+NOT working Nomad LXD Driver, it's Nomad LXC Driver + some changes for [nomad_ynh switch lxc to lxd tests](https://github.com/YunoHost-Apps/nomad_ynh/pull/2)
 ==================
 
 - Website: https://www.nomadproject.io
@@ -17,7 +17,7 @@ Building The Driver
 Clone repository to: `$GOPATH/src/github.com/yalh76/nomad-driver-lxd`
 
 ```sh
-$ mkdir -p $GOPATH/src/github.com/hashicorp; cd $GOPATH/src/github.com/hashicorp
+$ mkdir -p $GOPATH/src/github.com/yalh76; cd $GOPATH/src/github.com/yalh76
 $ git clone git@github.com:yalh76/nomad-driver-lxd
 ```
 
@@ -31,8 +31,8 @@ $ make build
 Using the driver
 ----------------------
 
-- [Documentation](https://www.nomadproject.io/docs/drivers/external/lxc.html)
-- [Guide](https://www.nomadproject.io/guides/external/lxc.html)
+- [Documentation](https://www.nomadproject.io/docs/drivers/external/lxd.html)
+- [Guide](https://www.nomadproject.io/guides/external/lxd.html)
 
 Developing the Provider
 ---------------------------
